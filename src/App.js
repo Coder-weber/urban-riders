@@ -1,3 +1,4 @@
+import { Map } from "@material-ui/icons";
 import { createContext, useState } from "react";
 import {
   BrowserRouter as Router,
@@ -23,8 +24,10 @@ export const userContext =createContext();
 
 function App() {
 const [userLoggedIn, setUserLoggedIn] =useState({});
+
+
 return (
-<userContext.Provider value={[userLoggedIn,setUserLoggedIn]}>
+<userContext.Provider value={[userLoggedIn,setUserLoggedIn]} >
 
 <Router>
      
@@ -55,7 +58,9 @@ return (
           <Route path="/directLogin">
           <DirectLogin></DirectLogin>
           </Route>
-           
+        <Route path="/map">
+            <Map></Map>
+          </Route>    
         </Switch>
       
     </Router>

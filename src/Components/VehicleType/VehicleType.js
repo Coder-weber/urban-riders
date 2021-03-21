@@ -14,7 +14,7 @@ import LocalHotelIcon from "@material-ui/icons/LocalHotel";
 import WcIcon from "@material-ui/icons/Wc";
 import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
 import { useHistory } from "react-router-dom";
-
+import './vehicle.css';
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
@@ -39,8 +39,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const VehicleType = (props) => {
-  const { title, vehicleType, imgUrl } = props.room;
-  console.log();
+  const {  vehicleType, imgUrl } = props.vehicle;
   const classes = useStyles();
   const history = useHistory();
   const handleBook = (vehicleType) => {
@@ -48,12 +47,15 @@ const VehicleType = (props) => {
   };
 
   return (
-    <div>
-    <button onClick={()=>handleBook(vehicleType)}>
-      <img style={{ width: "100px", height: "40px" }} src={imgUrl} alt="" />
+  
+    <div class="col-md"  >
+    <button className="btn-modify" onClick={()=>handleBook(vehicleType)}>
+      <img style={{ width: "200px", height: "80px" }} src={imgUrl} alt="" />
       <p>Title {vehicleType} </p>
       </button>
     </div>
+    
+    
   );
 };
 

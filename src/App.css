@@ -1,6 +1,17 @@
+body{
+  background-image: url('./images/Bg.png');
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
 .App {
   text-align: center;
-}
+  }
 
 .App-logo {
   height: 40vmin;
